@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-function post({ post }) {
+function Post({ post }) {
   const navigate = useNavigate();
 
   const handleEdit = () => {
@@ -8,7 +8,7 @@ function post({ post }) {
   };
 
   const handleDelete = async () => {
-    await fetch(`http://localhost:3000/api/v1/posts/${post._id}`, {
+    await fetch(`https://mern-crud-app-hejo.onrender.com/api/v1/posts/${post._id}`, {
       method: "DELETE",
     });
     window.location.reload();
@@ -26,4 +26,4 @@ function post({ post }) {
   );
 }
 
-export default post;
+export default Post;
