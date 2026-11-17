@@ -11,7 +11,7 @@ function AddEditForm() {
     if (id) {
       async function fetchPost() {
         const response = await fetch(
-          `https://mern-crud-app-hego.onrender.com/api/v1/posts/${id}`
+          `https://mern-crud-app-hejo.onrender.com/api/v1/posts/${id}`
         );
         const data = await response.json();
         setTitle(data.data.title);
@@ -25,8 +25,8 @@ function AddEditForm() {
     e.preventDefault();
     const method = id ? "PUT" : "POST";
     const url = id
-      ? `https://mern-crud-app-hego.onrender.com/api/v1/posts/${id}`
-      : "https://mern-crud-app-hego.onrender.com/api/v1/posts";
+      ? `https://mern-crud-app-hejo.onrender.com/api/v1/posts/${id}`
+      : "https://mern-crud-app-hejo.onrender.com/api/v1/posts";
 
     await fetch(url, {
       method,
